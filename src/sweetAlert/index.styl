@@ -1,0 +1,100 @@
+azul = #2C6BFC;
+azul_fuerte = #074687;
+celeste = rgb(0, 152, 218)
+gris = #484848;
+morado = #9190F7;
+celeste = #44D2FB;
+gris_claro = #F2F2F2;
+verde = #AFE900;
+verde_claro = #C1E946;
+verde_oscuro = #8FAD34;
+naranja = #D98723;
+amarillo = #F2E125;
+@font-face {
+font-family: Montserrat-Bold;
+src: url('../fonts/Montserrat-Bold.ttf');
+}
+body 
+	background-color gris_claro
+	text-align center
+	header
+		background-color amarillo
+		//font-family 'Droid Serif', serif
+		font-family "Montserrat-Bold"
+		color black
+		margin 0em
+		padding 0.5em
+		position relative
+		width 100%
+		text-align left
+		overflow hidden
+		.logo
+			float left
+		h1
+			margin 0 190px 0 90px
+			padding 0
+			font-size 18pt
+			position relative
+			top 0.5em
+		nav
+			list-style none
+			text-decoration none
+			position absolute
+			top 1em
+			right 1em
+			a
+				color black
+				text-decoration none
+			a:hover
+				color morado
+				text-decoration none
+			img 
+				margin 0 10px 0 0
+				padding 0
+	.contenedor
+		display inline-block
+		width 100%
+		padding 1em
+		position relative
+		.datos
+			form
+				#dni,#password
+					color black
+					font-size 16pt
+		.datos
+			background-color azul_fuerte
+			border-radius 0.5em
+			color white
+			box-shadow 5px 5px 15px black
+			width 316px
+			padding 0.2em
+			float left
+			#reloj
+				background-color black
+				color white
+				text-align center
+				font-size 40pt
+				margin 0
+				padding 0
+				width 100%
+		iframe
+			display inline-block
+			width calc(100% - 335px)
+			height calc(100% - 97px)
+	.formulario
+		background-color azul_fuerte
+		border 2px solid verde
+		border-radius 3em 0 3em 3em
+		color white
+		opacity 0.95
+		padding 1em
+		margin 0.5em auto
+		width 300px
+		position absolute 
+		top 50px
+		right 1em
+		z-index 1
+		#login
+			
+			margin auto
+			padding 2em

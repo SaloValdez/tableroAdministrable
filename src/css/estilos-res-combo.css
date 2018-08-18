@@ -1,0 +1,31 @@
+#cont{
+   margin-top:30px;
+   width:100%;
+
+
+
+}
+
+#cont table{
+  width: 100%;
+  /* background-color: yellow; */
+  margin:3px;
+  font-size: 11px;
+  background-color: rgb(236, 236, 236);
+  opacity: 0.9;
+}
+
+#cont table input{
+  width: 100%;
+}
+
+#cont table tr td:first-child{
+  width: 60px;
+  text-align: right;
+}
+#cbx_grupo{
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+
+}

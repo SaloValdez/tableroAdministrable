@@ -1,0 +1,102 @@
+.container{
+  margin-top: 5px;
+}
+.btnNuevo{
+  background-color: #023859;
+  border: 1px #023859;
+  margin: 0px;
+}
+
+.modal .close{
+  color: #E6344A;
+}
+
+.modal .btn-secondary{
+  /*Boton cancelar*/
+}
+.modal .btnGuardar{
+    background-color: #023859;
+    border: 1px #023859;
+}
+.modal .btnGuardar:hover{
+    background-color: rgb(11, 80, 199);
+    border: 1px #023859;
+}
+/*TABLA================================== */
+
+.contedor-tabla{
+  overflow-x: scroll; /*Scroll horizontal*/
+}
+.contedor-tabla table thead{
+  background-color: #E6344A; /*color fondo cabecera*/
+  color: white; /*color texto cabecera*/
+   font-weight: bold;
+
+   height: 20px;
+}
+
+.contedor-tabla table thead tr td{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+}
+
+
+
+.contedor-tabla table thead tr td:nth-last-child(1){
+  background-color: #023859;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.contedor-tabla table thead tr td:nth-last-child(2){
+  background-color: #023859;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.contedor-tabla table tbody tr td:nth-last-child(1){
+text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.contedor-tabla table tbody tr td:nth-last-child(1) .btn{
+  cursor: pointer;
+}
+
+.contedor-tabla table tbody tr td:nth-last-child(2){
+text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.contedor-tabla table tbody tr td:nth-last-child(2) .btn{
+  cursor: pointer;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after  {
+  bottom: 0.2em; /*CENTRADO DE ICONO ORDENAMIENTO*/
+}
+
+.contedor-tabla table tbody tr td {
+  padding-top:2px;
+    padding-bottom:2px;
+
+}
+
+
+/*Paginacion*/
+
+.page-item.active .page-link{
+  background-color:  #E6344A;
+  border-color:  #E6344A;
+}
+.page-link{
+  color: #E6344A;
+}
+
+/*pie - info*/
+div.dataTables_wrapper div.dataTables_info{
+  color: #E6344A;
+}

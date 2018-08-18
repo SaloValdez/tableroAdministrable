@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'nunitoExtraliht';
+  src:  url('./../fuentes/nunito-sans/NunitoSans-ExtraLight.ttf');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+@font-face {
+  font-family: 'nunitoLiht';
+  src:  url('./../fuentes/nunito-sans/NunitoSans-Light.ttf');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: 'nunitoRegular';
+  src:  url('./../fuentes/nunito-sans/NunitoSans-Regular.ttf');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: 'nunitoBodl';
+  src:  url('./../fuentes/nunito-sans/NunitoSans-Bold.ttf');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+
+@font-face {
+  font-family: 'nunitoItalic';
+  src:  url('./../fuentes/nunito-sans/NunitoSans-Italic.ttf');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: 'nunitoLihtItalic';
+  src:  url('./../fuentes/nunito-sans/NunitoSans-ExtraLightItalic.ttf');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+/* DIGITAL */
+@font-face {
+  font-family: 'fuente-reloj';
+  src:  url('./../fuentes/digital/DS-DIGIB.TTF');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+/* CALCULATOR */
+@font-face {
+  font-family: 'fuente-reloj-calculadora';
+  src:  url('./../fuentes/digital/dsdigital.woff');
+  /* font-weight: normal;
+  font-style: normal; */
+}

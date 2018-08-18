@@ -1,0 +1,557 @@
+
+:root{
+  /* de  claro a oscuro*/
+  --colorUno:#49cced;
+  --colorDos: #41bedd;
+  --colorTres: #36a8c5;
+
+
+  --colorCuatro:#b94a48; /*importante*/
+/* background-color: var(--MiColor); */
+
+/*Formularios*/
+--bordeForm:#cdcdcd;
+--cabeceraForm:#efefef;
+--contenidoForm:#F9F9F9;
+
+/* =========botones */
+--verde:#468847;
+--amarillo:#F89406;
+--rojo:#B94A48;
+--azul:#3A87AD;
+--azulClaro:#0044CC;
+--negro:#333333;
+--plomo:#999999;
+--plomoClaro:#E6E6E6;
+/*----------------------*/
+
+--colorIco:#545F67;
+
+}
+
+
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+line-height: 20px;
+ min-width: 200px;
+  word-wrap: break-word;
+  /* min-height: 100vh; */ */
+}
+.contenedor{
+
+  display: flex;
+  flex-direction: column;
+}
+/*====================================================================== */
+/* TODO:MENU----------------------- */
+/*======================================================================= */
+.contenedor nav{
+  width: 100%;
+  background-color: var(--colorUno);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  /* z-index: 1000; */
+}
+
+.contenedor nav .barMenu{
+    display: none;
+}
+
+.contenedor > nav > ul {
+      display: flex;
+}
+.contenedor  nav li{
+    line-height: 35px;  /* altura del menu*/
+    list-style: none;
+    position: relative; /* TODO: PADRE  para que los subMenus salga de la maquetacion*/
+    background-color: var(--colorUno);
+}
+
+.contenedor nav > ul > li{
+  border-right: 1px solid var(--colorDos);
+}
+
+
+.contenedor  nav li ul{
+    position: absolute; /*TODO: HIJO  para que los subMenus salga de la maquetacion*/
+}
+
+.contenedor  nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 0 15px;
+      display: block;
+      text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+
+}
+
+.contenedor  nav a:hover{
+     background-color: var(--colorDos);
+
+}
+
+
+
+/* TODO:  Icono */
+.contenedor nav ul li a .icono{
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 35px;
+    text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+
+}
+
+.contenedor nav ul li  .icono.izquierda{
+   margin-right: 10px;
+   text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+}
+
+ nav ul li  .icono.derecha{
+  margin-left: 10px;
+  text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+}
+
+nav ul li  .icono.derecha2{
+  display: none;
+}
+
+
+
+
+.contenedor  nav   .contAvatar{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.contenedor .menuUsuario > li {
+  border-left: 1px solid var(--colorDos);
+}
+.contenedor  nav  .menuUsuario  .icono.izquierda.estadoUser{
+    background-image: url("./../img/icons/accept.png");
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    padding-top: 3px;
+    background-size: 17px 17px;
+
+}
+.contenedor  nav .contAvatar:hover{
+     background-color: var(--colorDos);
+}
+
+.contenedor  nav .confUser{
+  /* margin-top: 5PX; */
+}
+
+.contenedor  nav   .avatar{
+  border-radius: 50%;
+  /* background-size: 100% auto; */
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  border:2px solid #fff;
+  display: block;
+  margin-right: 10px;
+}
+
+
+
+
+
+/*  MENU segundo Nivel---------------------------*/
+
+.contenedor nav li li{
+  /* background-color: var(--colorTres); */
+  width: 180px;
+}
+
+.contenedor nav li li a{
+
+  background-color: var(--colorDos);
+}
+.contenedor nav li li a:hover{
+  background-color: var(--colorTres);
+}
+
+
+
+
+/*====================================================================== */
+/* TODO:CUERPO DEL PANEL----------------------- */
+/*======================================================================= */
+.contenedor .contenedorAdmin{
+
+  width: 100%;
+
+  margin-top:35px;
+}
+
+.contenedor .contenedorAdmin .headerTablet{
+  /* border: 3px solid rgb(43, 119, 2); */
+  display: none;
+}
+
+.contenedor .contenedorAdmin .contenido{
+
+  height: 100vh;
+
+}
+
+
+.contenedor .contenedorAdmin .contenido .uno{
+
+}
+.contenedor .contenedorAdmin .contenido .dos{
+
+}
+
+.contenedor .contenedorAdmin .contenido .tres{
+
+}
+
+/*========================================================================= /
+                                  RESPONSIVE
+========================================================================= /
+/ Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 481px) and (max-width: 1020px) {
+      .contenedor{
+        flex-direction: row;
+      }
+      .contenedor nav{
+        position:  fixed;
+        width: 45px;
+        height: 100%;
+        border: 1px solid var(--colorDos);
+        display: inherit; /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO**/
+      }
+      .contenedor nav ul{
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .contenedor nav .menuUsuario{
+      display: none;
+
+      }
+
+      .contenedor  nav li{
+        width: 45px;
+      }
+
+      .contenedor > nav > ul >  li > a  .texto{
+        display:none;
+      }
+
+      /* TODO: ------------------------------------------------- Icono */
+      .contenedor nav ul li a .icono{
+
+          line-height: 35px;
+          text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+
+      }
+
+      .contenedor nav ul li  .icono.izquierda{
+         margin-right: 10px;
+         text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+      }
+
+       nav ul li  .icono.derecha{
+          display: none;
+      }
+
+      .contenedor nav ul li  .icono.derecha2{
+        display:table;
+        margin-top: -35px;
+        margin-left:  18px;
+      }
+      /* ------------------------------------------------------ */
+
+      .contenedor nav ul ul{
+        display: none;
+        top:0px;
+        left: 45px;
+      }
+      .contenedor nav .menuUsuario {
+        flex-direction: column;
+        float: left;
+      }
+
+      /*====================================================================== */
+      /* TODO:INICIO ----- MENU  HEADER TABLET */
+      /*======================================================================= */
+      .contenedor .contenedorAdmin .headerTablet{
+        width: 100%;
+        background-color: var(--colorUno);
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 1000;
+      }
+
+        .contenedor .contenedorAdmin .headerTablet .headerTabletIzquierdo{
+
+        }
+        .contenedor .contenedorAdmin .headerTablet .headerTabletDerecho{
+
+        }
+
+
+      .contenedorAdmin > .headerTablet > ul {
+            display: flex;
+      }
+      .contenedorAdmin  .headerTablet li{
+          line-height: 35px;  /* altura del menu*/
+          list-style: none;
+          position: relative; /* TODO: PADRE  para que los subMenus salga de la maquetacion*/
+          background-color: var(--colorUno);
+      }
+
+      .contenedorAdmin .headerTablet > ul > li{
+        border-left: 1px solid var(--colorDos);
+      }
+
+
+      .contenedorAdmin  .headerTablet li ul{
+          position: absolute; /*TODO: HIJO  para que los subMenus salga de la maquetacion*/
+      }
+
+      .contenedorAdmin  .headerTablet a {
+            text-decoration: none;
+            color: #ffffff;
+            padding-right: 50px;
+            padding-left: 10px;
+            display: block;
+            text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+
+      }
+
+      .contenedorAdmin  .headerTablet a:hover{
+           background-color: var(--colorDos);
+
+      }
+      /* TODO:  Icono */
+      .contenedorAdmin .headerTablet ul li a .icono{
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 35px;
+          text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+
+      }
+
+      .contenedorAdmin .headerTablet ul li  .icono.izquierda{
+         margin-right: 10px;
+         text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+      }
+
+       .headerTablet ul li  .icono.derecha{
+        margin-left: 10px;
+        text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+      }
+
+      .headerTablet ul li  .icono.derecha2{
+        display: none;
+      }
+      .contenedorAdmin  .headerTablet   .contAvatar{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+      }
+
+      .contenedorAdmin .menuUsuario > li {
+        border-left: 1px solid var(--colorDos);
+      }
+      .contenedorAdmin  .headerTablet ul  .icono.izquierda.estadoUser{
+          background-image: url("./../img/icons/accept.png");
+          background-repeat: no-repeat;
+          padding-left: 25px;
+          padding-top: 3px;
+          background-size: 17px 17px;
+          /* background-color: tomato; */
+
+      }
+      .contenedorAdmin  .headerTablet .contAvatar:hover{
+           background-color: var(--colorDos);
+      }
+
+      .contenedorAdmin  .headerTablet .confUser{
+        /* margin-top: 5PX; */
+      }
+
+      .contenedorAdmin  .headerTablet   .avatar{
+        border-radius: 50%;
+        /* background-size: 100% auto; */
+        height: 50px;
+        width: 50px;
+        padding: 0px;
+        border:2px solid #fff;
+        display: block;
+        margin-right: 10px;
+      }
+
+      /*  MENU segundo Nivel---------------------------*/
+
+      .contenedorAdmin .headerTablet li li{
+        /* background-color: var(--colorTres); */
+        width: 180px;
+      }
+
+      .contenedorAdmin .headerTablet li li a{
+        background-color: var(--colorDos);
+      }
+      .contenedorAdmin .headerTablet li li a:hover{
+        background-color: var(--colorTres);
+      }
+/*  FIN ----- MENU  HEADER TABLET */
+
+
+
+/* CUERPO  */
+.contenedor .contenedorAdmin{
+  margin-top:0px;
+  /* background-color: steelblue; */
+  margin-left: 47px;
+}
+.contenedor .contenedorAdmin .contenido{
+  margin-top:36px;
+  background-color: yellowgreen
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .contenedor{
+    flex-direction: column;
+  }
+  .contenedor nav{
+    display: flex;
+    flex-direction: column;
+    position: inherit;
+    /* border: 1px solid var(--colorDos); */
+
+  }
+
+  .contenedor nav .barMenu{
+  display: block;
+  position: fixed;
+  height: 35px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 35px;
+  background-color: var(--colorUno);
+  border-bottom: 1px solid var(--colorDos);
+  }
+
+  .contenedor nav .barMenu .icono.icon.icon-menu {
+    float: right;
+    margin-right: 26px;
+    margin-top: 8px;
+    font-size: 21px;
+  }
+
+  .contenedor nav ul{
+    flex-direction: column;
+    width: 100%;
+    margin-top:36px;
+  }
+  .contenedor  nav li{
+    width: 100%;
+    position: inherit;  /* mostrar submenu en su bloque*/
+  }
+
+
+  .contenedor > nav > ul >  li > a  .texto{
+    display:block;
+  }
+  /* TODO: ---------------------------------- Icono */
+
+  .contenedor nav ul li  .icono.izquierda{
+     float: left;
+     margin-top: -1px;
+     margin-left: -3px;
+     text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+  }
+  .contenedor nav ul li  a .icono.derecha{
+      float: right;
+       margin-top: -35px;
+  }
+  .contenedor nav ul li  .icono.derecha2{
+    display:none;
+  }
+  /* ------------------------------------------------------ */
+
+  .contenedor nav ul ul{
+    display: block;
+    position: inherit;  /* mostrar submenu en su bloque*/
+  }
+  .contenedor nav   li ul li {
+    width: 100%;
+  }
+  .contenedor nav   li ul li a {
+    padding-left: 40px;
+  }
+
+  .contenedor nav .menuUsuario {
+    display: block;
+    border-top: 1px solid var(--colorTres);
+    border-bottom: 1px solid var(--colorTres);
+  }
+
+  .contenedor nav .menuUsuario  li a .icono.izquierda.estadoUser{
+      float: none;
+  }
+
+  .contenedor nav .menuUsuario  li a .icono.derecha{
+      float: right;
+      margin-right: 1px;
+      margin-top:0px;
+  }
+  .contenedor .contenedorAdmin{
+    background-color: steelblue;
+    padding-top: 36px;
+    margin-top: 0px;
+    /* margin-left: 48px; */
+  }
+
+  /* CUERPO  */
+  .contenedor .contenedorAdmin{
+    /* margin-top:0px; */
+  }
+
+
+}
+
+/* Móviles en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {  }
