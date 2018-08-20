@@ -1,0 +1,44 @@
+
+:root{
+  /* de  claro a oscuro*/
+  --colorUno:#49cced;
+  --colorDos: #41bedd;
+  --colorTres: #36a8c5;
+
+
+  --colorCuatro:#b94a48; /*importante*/
+/* background-color: var(--MiColor); */
+
+/*Formularios*/
+--bordeForm:#cdcdcd;
+--cabeceraForm:#efefef;
+--contenidoForm:#F9F9F9;
+
+/* =========botones */
+--verde:#468847;
+--amarillo:#F89406;
+--rojo:#B94A48;
+--azul:#3A87AD;
+--azulClaro:#0044CC;
+--negro:#333333;
+--plomo:#999999;
+--plomoClaro:#E6E6E6;
+/*----------------------*/
+
+/*coilor icono PANEL ADMIN*/
+--colorIco:#545F67;
+}
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; /* relleno y borde estan incluidos en el ancho de los elemntos*/
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  font-size: 14px;
+  line-height: 20px; /*espacio  top y bootom en las letras*/
+  min-width: 200px;
+  word-wrap: break-word;
+  /* min-height: 100vh; */ */
+}

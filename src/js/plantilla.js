@@ -1,37 +1,36 @@
 $(document).ready(function(){
-
-
-
-barMenuSlide();
-slideSubmenu();
-
-
-
-
+//==============menu====================
+    barMenuSlide();
+    slideSubmenu();
+    slideSubmenuUsuarioTablet();
+    menuCuandoCambiaTamaño();
+    clickEnHtml();
+    linkSubmenu();
+    linkSubmenuTabletUsuario();
 
 //==============menu====================
-// linkSubmenu();
-// // linkSubmenu();
-// clickEnHtml();
-//
-
-// menuCuandoCambiaTamaño();
-// desplegarSubmenus();
-//==============menu====================
-
 });
 
-// function  clickEnHtml(){
-//       $("html").click(function(){
-//           // alert("hola");
-//           $("nav ul li").removeClass("activado");
-//           $("nav ul li ul").slideUp();  //ucultar submenus
-//       })
-//
-//       $("nav").click(function(e){
-//         e.stopPropagation();
-//       });
-// }
+
+
+
+
+function  clickEnHtml(){
+      $("html").click(function(){
+          // alert("hola");
+          $("nav ul li").removeClass("activado");
+          $("nav ul li ul").slideUp();  //ucultar submenus
+
+          $(".contenedorAdmin .headerTablet > ul li").removeClass("activado");
+          $(".contenedorAdmin .headerTablet > ul li ul").slideUp();  //ucultar submenus
+      })
+      $("nav").click(function(e){
+        e.stopPropagation();
+      });
+      $(".contenedorAdmin .headerTablet").click(function(e){
+        e.stopPropagation();
+      });
+}
 
 function barMenuSlide(){
   $(".barMenu").click(function(){  //barra movil
@@ -42,6 +41,23 @@ function barMenuSlide(){
   });
 }
 
+function slideUsuarioTablet(){
+  $(".headerTablet ul li:has(ul)").click(function(e){
+    //seleccionar elementos li que tengan ul "submenu"
+      e.preventDefault(); //que no fucnine el href  #  o Url
+      if ($(this).hasClass("activado")) {
+        //si el elemnto  li tiene la clase "activado"
+         $(this).removeClass("activado");
+        // $(this).children("ul").slideUp();
+      }else {
+        $(".headerTablet ul li ul").slideUp();  //ucultar submenus
+        $(".headerTablet .usuario li ul").slideUp();  //ucultar submenus
+        $(".headerTablet ul li").removeClass('activado');
+        $(this).addClass("activado");
+        $(this).children("ul").slideDown();  // hijos ul de li  "mostarr"
+      }
+  });
+}
 
 function  menuCuandoCambiaTamaño(){
   $(window).resize(function(){//si el tamaño de la venana cambia  (detecta vertical o horizontal)
@@ -65,6 +81,8 @@ function  menuCuandoCambiaTamaño(){
         //
         //
         if($(document).width() < 480){  //si el tamaño del documento es mayor a 450
+          cerrarBarMenu();
+
           // $(".btn-menu").css({'display':'block'});
           // $("nav > ul").css({'display':'none'}); //mostrar si o si el menu
           // $("nav ul li ul").slideUp(); //ocultar los submenus
@@ -75,7 +93,13 @@ function  menuCuandoCambiaTamaño(){
 
 function linkSubmenu(){
   // debido al "e.preventDefault()" de desplegarSubmenus();  no funciona los submenus
-  $("nav ul li ul li a").click(function(){
+  $(".contenedor nav > ul li ul li a").click(function(){
+      window.location.href = $(this).attr("href");  //captura el url y rederige a ese url
+  });
+}
+function linkSubmenuTabletUsuario(){
+  // debido al "e.preventDefault()" de desplegarSubmenus();  no funciona los submenus
+  $(".contenedorAdmin .headerTablet > ul li ul li a").click(function(){
       window.location.href = $(this).attr("href");  //captura el url y rederige a ese url
   });
 }
@@ -86,6 +110,7 @@ function slideSubmenu(){
       if ($(this).hasClass("activado")) {
         //si el elemnto  li tiene la clase "activado"
          $(this).removeClass("activado");
+         $("nav ul li ul").slideUp();  //ucultar submenus
         // $(this).children("ul").slideUp();
       }else {
         $("nav ul li ul").slideUp();  //ucultar submenus
@@ -96,3 +121,42 @@ function slideSubmenu(){
       }
   });
 }
+
+function slideSubmenuUsuarioTablet(){
+  $(".contenedor .contenedorAdmin .headerTablet ul li:has(ul)").click(function(e){
+    //seleccionar elementos li que tengan ul "submenu"
+      e.preventDefault(); //que no fucnine el href  #  o Url
+      if ($(this).hasClass("activado")) {
+        //si el elemnto  li tiene la clase "activado"
+         $(this).removeClass("activado");
+         $(".contenedor .contenedorAdmin .headerTablet ul li ul").slideUp();  //ucultar submenus
+        // $(this).children("ul").slideUp();
+      }else {
+        $("nav ul li ul").slideUp();  //ucultar submenus
+        $("nav .usuario li ul").slideUp();  //ucultar submenus
+        $("nav ul li").removeClass('activado');
+        $(this).addClass("activado");
+        $(this).children("ul").slideDown();  // hijos ul de li  "mostarr"
+      }
+  });
+}
+
+
+// ===== INICIO SUBMENU  --CORRIGIENDO ERROR
+    var mediumBp = matchMedia('(max-width: 480px)');
+    var changeSize = function changeSize(mql) {
+          if(mql.matches){
+            var menu = document.querySelector("nav > ul")
+            menu.style.display= "none"
+            var elemento = document.querySelector("nav > .menuUsuario")
+            elemento.style.display= "none"
+          }else {
+            // var elemento = document.querySelector(".contenedor .ejemplo > ul > li");
+            // elemento.style.display = "block"
+            // var menu = document.querySelector("nav > ul")
+            // menu.style.display= "block"
+          }
+    };
+    mediumBp.addListener(changeSize);
+    changeSize(mediumBp);
+// ===== FIN  SUBMENU  --CORRIGIENDO ERROR

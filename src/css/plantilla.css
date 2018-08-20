@@ -1,49 +1,4 @@
-
-:root{
-  /* de  claro a oscuro*/
-  --colorUno:#49cced;
-  --colorDos: #41bedd;
-  --colorTres: #36a8c5;
-
-
-  --colorCuatro:#b94a48; /*importante*/
-/* background-color: var(--MiColor); */
-
-/*Formularios*/
---bordeForm:#cdcdcd;
---cabeceraForm:#efefef;
---contenidoForm:#F9F9F9;
-
-/* =========botones */
---verde:#468847;
---amarillo:#F89406;
---rojo:#B94A48;
---azul:#3A87AD;
---azulClaro:#0044CC;
---negro:#333333;
---plomo:#999999;
---plomoClaro:#E6E6E6;
-/*----------------------*/
-
---colorIco:#545F67;
-
-}
-
-
-
-*{
-  padding: 0px;
-  margin: 0px;
-}
-body{
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-line-height: 20px;
- min-width: 200px;
-  word-wrap: break-word;
-  /* min-height: 100vh; */ */
-}
+  @import url(./root.css);
 .contenedor{
 
   display: flex;
@@ -53,6 +8,7 @@ line-height: 20px;
 /* TODO:MENU----------------------- */
 /*======================================================================= */
 .contenedor nav{
+  font-weight: bold;
   width: 100%;
   background-color: var(--colorUno);
   position: fixed;
@@ -67,6 +23,7 @@ line-height: 20px;
 
 .contenedor > nav > ul {
       display: flex;
+
 }
 .contenedor  nav li{
     line-height: 35px;  /* altura del menu*/
@@ -80,8 +37,15 @@ line-height: 20px;
 }
 
 
+.contenedor nav > ul .activado > a{
+  /* estilo para el active submenu  */
+ background-color: #1b86a1;
+}
+
+
 .contenedor  nav li ul{
     position: absolute; /*TODO: HIJO  para que los subMenus salga de la maquetacion*/
+    display: none;
 }
 
 .contenedor  nav a {
@@ -239,22 +203,29 @@ nav ul li  .icono.derecha2{
       .contenedor nav ul{
         flex-direction: column;
         width: 100%;
+        /* display: block !important; */
       }
 
-      .contenedor nav .menuUsuario{
-      display: none;
-
+      .contenedor > nav > .menuUsuario{
+      display: none !important;
       }
 
       .contenedor  nav li{
         width: 45px;
       }
+      .contenedor  nav li li{
+        width: 150px;
+      }
 
       .contenedor > nav > ul >  li > a  .texto{
         display:none;
       }
-
-      /* TODO: ------------------------------------------------- Icono */
+      .contenedor nav > ul{
+        /* flex-direction: column;
+        width: 100%; */
+        display: block !important;
+      }
+      /* TODO: ----------------------------- Icono */
       .contenedor nav ul li a .icono{
 
           line-height: 35px;
@@ -279,20 +250,19 @@ nav ul li  .icono.derecha2{
       /* ------------------------------------------------------ */
 
       .contenedor nav ul ul{
-        display: none;
+        display: none ;
         top:0px;
         left: 45px;
+        width: 200px;
       }
-      .contenedor nav .menuUsuario {
-        flex-direction: column;
-        float: left;
-      }
+
 
       /*====================================================================== */
       /* TODO:INICIO ----- MENU  HEADER TABLET */
       /*======================================================================= */
       .contenedor .contenedorAdmin .headerTablet{
         width: 100%;
+        font-weight: bold;
         background-color: var(--colorUno);
         position: fixed;
         display: flex;
@@ -300,15 +270,6 @@ nav ul li  .icono.derecha2{
         justify-content: space-between;
         z-index: 1000;
       }
-
-        .contenedor .contenedorAdmin .headerTablet .headerTabletIzquierdo{
-
-        }
-        .contenedor .contenedorAdmin .headerTablet .headerTabletDerecho{
-
-        }
-
-
       .contenedorAdmin > .headerTablet > ul {
             display: flex;
       }
@@ -324,9 +285,19 @@ nav ul li  .icono.derecha2{
       }
 
 
+      .contenedorAdmin .headerTablet > ul .activado > a{
+        /* estilo para el active submenu  */
+       background-color: #1b86a1;
+      }
+
+
+
+
       .contenedorAdmin  .headerTablet li ul{
           position: absolute; /*TODO: HIJO  para que los subMenus salga de la maquetacion*/
+          display: none;
       }
+
 
       .contenedorAdmin  .headerTablet a {
             text-decoration: none;
@@ -373,9 +344,7 @@ nav ul li  .icono.derecha2{
 
       }
 
-      .contenedorAdmin .menuUsuario > li {
-        border-left: 1px solid var(--colorDos);
-      }
+
       .contenedorAdmin  .headerTablet ul  .icono.izquierda.estadoUser{
           background-image: url("./../img/icons/accept.png");
           background-repeat: no-repeat;
@@ -389,9 +358,6 @@ nav ul li  .icono.derecha2{
            background-color: var(--colorDos);
       }
 
-      .contenedorAdmin  .headerTablet .confUser{
-        /* margin-top: 5PX; */
-      }
 
       .contenedorAdmin  .headerTablet   .avatar{
         border-radius: 50%;
@@ -434,18 +400,6 @@ nav ul li  .icono.derecha2{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 /* Móviles en horizontal o tablets en vertical
@@ -484,10 +438,12 @@ nav ul li  .icono.derecha2{
     flex-direction: column;
     width: 100%;
     margin-top:36px;
+    display: none;
   }
   .contenedor  nav li{
     width: 100%;
     position: inherit;  /* mostrar submenu en su bloque*/
+
   }
 
 
@@ -512,8 +468,9 @@ nav ul li  .icono.derecha2{
   /* ------------------------------------------------------ */
 
   .contenedor nav ul ul{
-    display: block;
+    display: none;
     position: inherit;  /* mostrar submenu en su bloque*/
+    margin-top: 0px;
   }
   .contenedor nav   li ul li {
     width: 100%;
@@ -523,7 +480,7 @@ nav ul li  .icono.derecha2{
   }
 
   .contenedor nav .menuUsuario {
-    display: block;
+    /* display: block; /*============================================================================*/
     border-top: 1px solid var(--colorTres);
     border-bottom: 1px solid var(--colorTres);
   }
@@ -548,10 +505,14 @@ nav ul li  .icono.derecha2{
   .contenedor .contenedorAdmin{
     /* margin-top:0px; */
   }
-
-
 }
 
 /* Móviles en vertical
    ------------------------------------------------------------------------- */
-@media (max-width: 480px) {  }
+@media  (min-width: 1020px) {
+
+  .contenedor > nav > ul {
+      /* display: block !important ; */
+        display: flex !important;
+  }
+}
