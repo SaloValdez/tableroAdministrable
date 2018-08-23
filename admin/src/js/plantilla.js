@@ -7,13 +7,14 @@ $(document).ready(function(){
     clickEnHtml();
     linkSubmenu();
     linkSubmenuTabletUsuario();
-
 //==============menu====================
+
+
+//===============form========================
+vistaPreviaImagenInputFile();
+
+//===============form==========================
 });
-
-
-
-
 
 function  clickEnHtml(){
       $("html").click(function(){
@@ -160,3 +161,39 @@ function slideSubmenuUsuarioTablet(){
     mediumBp.addListener(changeSize);
     changeSize(mediumBp);
 // ===== FIN  SUBMENU  --CORRIGIENDO ERROR
+
+
+
+// TODO: INICIO input file
+// (function() {
+//
+//   'use strict';
+//
+//   $('.input-file').each(function() {
+//           var $input = $(this),
+//               $label = $input.next('.js-labelFile'),
+//               labelVal = $label.html();
+//
+//          $input.on('change', function(element) {
+//             var fileName = '';
+//             if (element.target.value) fileName = element.target.value.split('\\').pop();
+//             fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
+//          });
+//   });
+//
+// })();
+
+function vistaPreviaImagenInputFile(){
+      $('#file').change(function(){
+        // vistaPreviaImagen(this);
+        if (this.files  && this.files[0]) {
+            var  reader  = new FileReader(); //clase que permite leer archivos
+            reader.onload = function(e){  // e -> evento que permite acceder a la ruta de la imagen
+                $('#mostrarImagen').html("<img src='"+e.target.result+"' class='img-thumbnail'/>");
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+      });
+}
+
+// FIN  input file

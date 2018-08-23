@@ -1,6 +1,5 @@
   @import url(./root.css);
 .contenedor{
-
   display: flex;
   flex-direction: column;
 }
@@ -129,10 +128,6 @@ nav ul li  .icono.derecha2{
   margin-right: 10px;
 }
 
-
-
-
-
 /*  MENU segundo Nivel---------------------------*/
 
 .contenedor nav li li{
@@ -148,9 +143,6 @@ nav ul li  .icono.derecha2{
   background-color: var(--colorTres);
 }
 
-
-
-
 /*====================================================================== */
 /* TODO:CUERPO DEL PANEL----------------------- */
 /*======================================================================= */
@@ -158,7 +150,7 @@ nav ul li  .icono.derecha2{
 
   width: 100%;
 
-  margin-top:35px;
+  margin-top:2px;
 }
 
 .contenedor .contenedorAdmin .headerTablet{
@@ -167,22 +159,286 @@ nav ul li  .icono.derecha2{
 }
 
 .contenedor .contenedorAdmin .contenido{
-
   height: 100vh;
+  width: 100%;
+  background:url(./../img/backgrounds/bodyBg.png) repeat #fff;
+  /* padding: 10px; */
+  padding-top: 34px;
 
 }
 
 
-.contenedor .contenedorAdmin .contenido .uno{
+
+
+
+/* TODO INICIO Grilla  (Sistema Grilla con CSS GRID)=============================== */
+.caja{
+  margin: auto;
+  padding-top: 20px;
+  margin-left: 1%;
+  margin-right:1%;
+  font-size: 16px;  /*fuente padre formulario*/
+}
+
+
+.box-conten{
+  /* margin-top: 10px; */
+  width: 100%;
+  display: grid;
+  /* background-color: yellow; */
+  grid-template-columns: repeat(2,33.33333333%);
+
+  grid-template-rows: ;
+}
+
+.col{
+  /* border: 1px solid rgb(50, 42, 103); */
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 5px;
+}
+.box-conten .col:nth-child(3){
+  height: 100%;
+  grid-column: 3/4;
+  grid-row: 1/5;
+  /* background-color: rgb(154, 215, 241); */
+  /* border: black 1px solid; */
+  /* align-self: stretch; */
+   margin: auto;
+   width: 100%;
+  /* line-height: 40px; */
+}
+.col:nth-child(3) > div{
 
 }
-.contenedor .contenedorAdmin .contenido .dos{
+/* TODO FIN Grilla  (Sistema Grilla con CSS GRID)=============================== */
+
+
+
+/* FORMULARIOS */
+
+.box-formulario {
+  border: 1px solid var(--bordeForm);
+}
+
+.box-formulario .cabeceraFormulario{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cabeceraForm);
+  /* height: 36px; */
+  border-bottom: 1px solid var(--bordeForm);
+
+}
+            .box-formulario .cabeceraFormulario .titulo{
+              display: flex;
+            }
+            .box-formulario .cabeceraFormulario .titulo h5{
+              text-shadow: 0 1px 0 #ffffff;
+              font-size: 0.9rem;
+              font-weight: bold;
+              align-self: center;
+            }
+            .box-formulario .cabeceraFormulario .titulo .cont-icon{
+              margin: 0px;
+              border-right: 1px solid var(bordeForm);
+              display: block;
+              padding: 0.36rem  0.5rem;
+            }
+            .box-formulario .cabeceraFormulario .titulo .lineaDer{
+              height: 100%;
+              margin: 0px;
+              border-right: 1px solid  var(--bordeForm);
+              display: block;
+              margin-right: 10px;
+            }
+            .box-formulario .cabeceraFormulario .titulo .icon{
+              text-shadow: 0 1px 0 #ffffff;
+              font-size: 1.3rem;
+            }
+
+            .box-formulario .cabeceraFormulario .cont-boton{
+              align-self: center;
+              margin-right: 5px;
+            }
+            .boton{
+              align-self: center;
+              padding: 2px 10px;
+              font-size: 0.8rem;
+              font-weight: bold;
+                  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+              /* border: 1px solid var(--bordeForm); */
+              color: #fff;
+              box-shadow: 0px 1px 0px 0px rgb(31, 31, 31);
+            }
+            .boton > .icon{
+              color: rgb(18, 18, 18);
+              margin-right: 5px;
+              text-shadow: 0 -1px 0 rgb(124, 124, 124);
+            }
+            .boton.verde{
+              background-color: var(--botonVerde);
+              border: 1px solid rgb(20, 98, 49);
+            }
+
+            .boton.verde:hover{
+              background-color: var(--botonVerdeHover);
+              padding: 3px 11px;
+            }
+.box-formulario .bodyFormulario{
+  /* background-color: var(--contenidoForm); */
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem;
+}
+
+.box-formulario .pieFormulario{
+  display: flex;
+  border-top: 1px solid var(--bordeFormTopPie);
+  background-color: #f5f5f5;
+  /* background-color: deeppink; */
+  height: 100%;
+  justify-content: space-between;
+  padding: 10px   0px;
+
+}
+        .box-formulario .pieFormulario .cont-mensaje-pie{
+          /* display: flex; */
+          /* margin: 0px  15px; */
+          align-self: center;
+        }
+        .box-formulario .pieFormulario .cont-botones-pie{
+          margin-right: 5px;
+          padding: 10px;
+          align-self: center;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contenido label{
+  margin-bottom: 0px;
+  font-weight: 0px;
+  font-size: 0.95em
+}
+.contenido input[type=text]{
+    width: 100%;
+    height: 20PX;
+    font-size: 1rem;
+    padding: 0.8rem 0.2rem;
+    line-height: 0;
+    background: #f5f5f5;
+    border-radius: 2px;
+    border: 1px solid var(--bordeForm);
+    box-shadow: inset 0px 2px 3px rgba( 0,0,0,0.1 );
+}
+
+.contenido input[type=text]:hover{
+    background: rgba(109, 210, 247,0.4);
+}
+
+.contenido input[type=text]:focus{
+    background: #fff;
+    box-shadow: 0px 0px 0px 1px rgba(17, 226, 255, 0.8), inset 0px 2px 3px rgba(17, 226, 255, 0.2);
+    outline: none;
+    color: var(--azulClaro);
+    font-weight: bold;
+    text-shadow: inset 0px 2px 3px rgba( 0,0,0,0.8);
+}
+.contenido .mostrarImagen img{
+  height: 100px;
+}
+
+.contenido input[type=file]{
+  display: none;
+}
+
+
+.contenido .content-img-input{
+        height: 100%;
+        /* background-color: yellow; */
+        display: flex;
+        justify-content: center;
+        position:relative;
+}
+.contenido .content-img{
+  width: 100%;
+  margin: 10px 10px;
+  /* background-color: tomato; */
+  border: 2px solid var(--bordeForm);
+  background-color: var(--contenidoForm);
+   border-style: dashed;
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+}
+.contenido .content-input-file{
+/* background-color: yellowgreen; */
+  position:absolute;
+  bottom:-10px;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5rem;
+  margin: 5px;
+}
+
+
+.contenido .content-input-file .nombre-imagen{
+  padding: 3px 5px;
+  background: #f5f5f5;
+  border-radius: 15px 0px 0px 15px;
+  border-top: 1px  solid var(--bordeForm);
+  border-right: 0px;
+  border-bottom: 1px  solid var(--bordeForm);
+  border-right: 1px  solid var(--bordeForm);
+  box-shadow: inset 0px 2px 3px rgba( 0,0,0,0.1 );
+  color: var(--azulClaro);
+  font-weight:normal;
+  font-style:italic;
 
 }
 
-.contenedor .contenedorAdmin .contenido .tres{
-
+.contenido .content-input-file .btn-imagen{
+  /* border: 1px solid rgb(63, 13, 231); */
+  padding: 3px 5px;
+background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
+  border: 1px solid var(--bordeForm);
+  border-radius: 0px 15px 15px 0px;
+  text-shadow:0 1px 0 #ffffff;
 }
+.contenido .content-input-file .btn-imagen:hover{
+background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 36%, rgba(252,252,252,1) 100%);
+}
+
+.contenido .content-input-file .btn-imagen .icon{
+  font-size: 1.2rem;
+  float: left;
+  margin-top:2px;
+  margin-right: 5px;
+}
+
+
+   /* caja BOX cabecera y contenido */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*========================================================================= /
                                   RESPONSIVE
@@ -190,6 +446,9 @@ nav ul li  .icono.derecha2{
 / Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- */
 @media (min-width: 481px) and (max-width: 1020px) {
+      html,input{
+          font-size: 20px; /* elemento padre;*/
+      }
       .contenedor{
         flex-direction: row;
       }
@@ -495,7 +754,8 @@ nav ul li  .icono.derecha2{
       margin-top:0px;
   }
   .contenedor .contenedorAdmin{
-    background-color: steelblue;
+    /* background-color: steelblue; */
+      background:url(./../img/backgrounds/bodyBg.png) repeat #fff;
     padding-top: 36px;
     margin-top: 0px;
     /* margin-left: 48px; */

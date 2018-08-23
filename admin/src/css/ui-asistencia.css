@@ -1,0 +1,414 @@
+  @import url(./root.css);
+
+html,body{
+  height:100%;
+  background-color:  var(--cabeceraForm);
+}
+.contenedor{
+    height: 100%;
+    width: 100%;
+}
+.contenedor .cabecera{
+  background-color: var(--cabeceraForm);
+line-height: 35px;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.46);
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+
+}
+
+.contenedor .cabecera .cab.cabeceraIzquierdo a > img {
+  height: 35px;
+  padding-left: 25px
+}
+
+.contenedor .cabecera .cab.cabeceraDerecho {
+  text-align: left;
+}
+
+.contenedor .cabecera .cab.cabeceraDerecho > li > .men {
+  font-weight: bold;
+  display: flex;
+  justify-content:space-around;
+  color:var(--azul);
+}
+.contenedor .cabecera .cab.cabeceraDerecho > li > .men:hover{
+  color: var(--colorTres);
+}
+.contenedor .cabecera .cab.cabeceraDerecho > li > .men  .icono{
+  line-height: 35px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* ===  INICIO  MENU PANEL ADMINSTRACION ====================================================================*/
+.contenedor .cabecera .cab.cabeceraDerecho li > ul {
+
+   display: flex;
+
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   background-color: var(--cabeceraForm);
+   padding: 20px;
+   margin-right: 5px;
+   border-radius: 0px 0px 3px 3px;
+   -webkit-box-shadow: 1px 5px 10px -2px rgba(0,0,0,0.35);
+
+   opacity:0;
+
+
+
+}
+
+.contenedor .cabecera .cab.cabeceraDerecho li ul > span{
+  background-color: var(--colorDos);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 15px;
+  margin-top: 5px;
+  margin-left: 40%;
+  margin-bottom: 15px;
+}
+.contenedor .cabecera .cab.cabeceraDerecho li ul hr {
+  border: 1px solid var(--colorDos);
+
+}
+
+.contenedor .cabecera .cab.cabeceraDerecho li ul > span .icon{
+  font-size:35px;
+  color: #ebebeb;
+  /* text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px; */
+  margin-top: 10px;
+}
+
+
+
+.contenedor .cabecera .cab.cabeceraDerecho li form .contenedorInput{
+    line-height: 40px;  /* altura centrado*/
+}
+.contenedor .cabecera .cab.cabeceraDerecho li form .contenedorInput span{
+    /* background-color: yellowgreen; */
+    display: block;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+
+}
+.contenedor .cabecera .cab.cabeceraDerecho li form .contenedorInput .icono{
+    font-size: 20px;
+    color: var(--colorDos);
+    position: absolute;
+    margin-top: 8px;
+    padding-left: 2px;
+    text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+}
+
+.contenedor .cabecera .cab.cabeceraDerecho li form .contenedorInput input{
+    background-color: white;
+    width: 220px;
+    height: 30px;
+    padding-left: 25px;
+    font-size: 21px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left:0px;
+    border-bottom: 1px solid var(--colorTres);
+    color:#1b1b1b;
+
+}
+.contenedor .cabecera .cab.cabeceraDerecho li form .contenedorInput input[type=button]{
+
+    width: 150px;
+    height: 40px;
+    padding-left: 0px;
+    margin-top: 15px;
+    font-size: 18px;
+    border:0px;
+    color: #ffffff;
+    background-color: var(--colorUno);
+    box-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+    border-radius: 5px  5px 5px 5px;
+    cursor: pointer;
+
+}
+.contenedor .cabecera .cab.cabeceraDerecho li form .contenedorInput input[type=button]:hover{
+
+    width: 153px;
+    height: 40px;
+    padding-left: 0px;
+    margin-top: 15px;
+    font-size: 20px;
+    border:0px;
+    background-color: var(--colorTres);
+}
+/*  ===  FIN  PANEL ADMINISTRACION ======================================================================*/
+
+
+
+.contenedor .contenedorActivos{
+  background:url(./../img/backgrounds/bodyBg.png) repeat #fff;
+  padding-top:35px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.contenedor .contenedorActivos .contenedorFormularioAsistencia{
+  /* background-color:var(--colorCuatro); */
+  /* background:url(./../img/backgrounds/bodyBgSaloDos.png) repeat #fff; */
+  background-color: var(--cabeceraForm);
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-right: 1px solid var(--bordeForm);
+  /* position: fixed; */
+}
+
+.contenedor .contenedorActivos .contenedorFormularioAsistencia .contenedorReloj .hora{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 3px;
+  padding-left: 3px;
+  height: 55px;
+  line-height: 33px;  /* altura centrado*/
+  font-size: 2.5em;
+  text-align: center;
+  background-color: rgb(46, 46, 46);
+  border: 3px solid var(--colorIco);
+  text-shadow: 1px 1px 10px var(--colorUno);
+  box-shadow: inset 1px 1px 10px 1px #000000;
+  color: aliceblue
+}
+
+.contenedor .contenedorActivos .contenedorFormularioAsistencia .formulario{
+  margin-top: 20px;
+}
+.contenedor .contenedorActivos .contenedorFormularioAsistencia .formulario .contenedorInput{
+    line-height: 40px;  /* altura centrado*/
+}
+.contenedor .contenedorActivos .contenedorFormularioAsistencia .formulario .contenedorInput span{
+    /* background-color: yellowgreen; */
+    display: block;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+
+}
+.contenedor .contenedorActivos .contenedorFormularioAsistencia .formulario .contenedorInput .icono{
+    font-size: 25px;
+    color: var(--colorTres);
+    position: absolute;
+    margin-top: 5px;
+    text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+}
+
+.contenedor .contenedorActivos .contenedorFormularioAsistencia .formulario .contenedorInput input{
+    background-color: white;
+    width: 220px;
+    height: 40px;
+    padding-left: 30px;
+    font-size: 25px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left:0px;
+    border-bottom: 1px solid var(--colorTres);
+    color:#1b1b1b;
+
+}
+.contenedor .contenedorActivos .contenedorFormularioAsistencia .formulario .contenedorInput input[type=button]{
+
+    width: 220px;
+    height: 40px;
+    padding-left: 0px;
+    margin-top: 15px;
+    font-size: 25px;
+    border:0px;
+    color: #ffffff;
+    background-color: var(--colorTres);
+    box-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+    border-radius: 5px  5px 5px 5px;
+    cursor: pointer;
+}
+.contenedor .contenedorActivos .contenedorFormularioAsistencia .formulario .contenedorInput input[type=button]:hover{
+
+    width: 223px;
+    height: 40px;
+    padding-left: 0px;
+    margin-top: 15px;
+    font-size: 23px;
+    border:0px;
+    background-color: var(--colorUno);
+}
+
+
+
+
+
+
+/* ====INICIO ----  contenedorUsuariosActivos ============================================================================================*/
+    .contenedor .contenedorActivos .contenedorUsuariosActivos{
+      /* margin: 5px; */
+      width: 100%;
+    }
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos{
+      /* border: 1px solid rgb(24, 86, 208); */
+      -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.67);
+      width: 100%;
+      height: 100%;
+      background-color: var(--colorUno);
+      display: table;
+      padding-top:8px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-bottom: 8px;
+    }
+
+/* TODO INICIO ========ARTICLE USUARIO ACTIVO ===============================================*/
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article{
+      border: 1px solid rgb(255, 255, 255);
+      display: flex;
+      border-radius: 4px;
+      -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.67);
+      /* padding-bottom: 5px; */
+      background-color: var(--cabeceraForm);
+      margin-bottom: 5px;
+
+    }
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .foto{
+      border-right: 1px solid var(--bordeForm);
+      width: 130px;
+      height: 115px;
+
+
+    }
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .foto span{
+      /* background-color: yellowgreen; */
+      border: 1px solid var(--bordeForm);
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: block;
+      margin: 5px;
+      /* margin:10px; */
+      height: 100%;
+      overflow: hidden;
+
+    }
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .foto img{
+     max-height: 100%;
+     max-width: 100%;
+           /* object-fit: cover; */
+           /* object-position: center center; */
+
+      /* display: block; */
+          /* background-color: aliceblue;
+          width: 110px;
+          /* padding: 5px; */
+          /* height: 130px;
+          height: 100%;
+          width: 120px;
+          border: 1px solid rgb(232, 23, 9);  */
+    }
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .contenedorDetalle{
+        width: 100%;
+    }
+
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .contenedorDetalle .cabeceraDetalle{
+          background-color: var(--cabeceraForm);
+          font-size: 25px;
+          height: 35px;
+          line-height: 35px;
+          padding-left: 10px;
+          border-bottom: 1px solid var(--bordeForm);
+          overflow: hidden;
+    }
+
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .contenedorDetalle .cabeceraDetalle  .eliminarSession{
+      position: absolute;
+      background-color: var(--cabeceraForm);
+      display: block; /*TODO :  CE*/
+      padding: 10px;
+      -webkit-box-shadow: 1px 5px 10px -2px rgba(0,0,0,0.35);
+      opacity:0;
+    }
+      .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .contenedorDetalle .cabeceraDetalle  .eliminarSession input[type=button]{
+        color: var(--colorTres);
+        font-weight: bold;
+      }
+
+
+    .contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .contenedorDetalle .cabeceraDetalle .nombreUsuario:hover{
+      color:teal;
+      cursor: pointer;
+    }
+
+    .contenedor .contenedorActivos .contenedorUsuariosActivos
+    .activos > article .contenedorDetalle .detalle{
+          display: flex;
+          justify-content: space-between;
+          padding-left: 10px;
+          background-color: var(--contenidoForm);
+          padding-top:5px;
+          padding-bottom: 5px;
+      }
+
+.contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .contenedorDetalle .detalle .col{
+  /* border: 1px solid rgb(35, 245, 101); */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .contenedorDetalle .HoraFechas{
+    font-size: 12px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cabeceraForm);
+    border-top: 1px solid var(--bordeForm);
+
+}
+
+
+.contenedor .contenedorActivos .contenedorUsuariosActivos .activos > article .contenedorDetalle .HoraFechas .col{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid rgb(225, 228, 59); */
+}
+/* TODO FIN ============ARTICLE USUARIO ACTIVO ==============================================*/
+
+
+
+
+.contenedor .contenedorActivos .contenedorUsuariosActivos .status{
+/* border: 1px solid rgb(224, 12, 6); */
+position: fixed;
+bottom: 0px;
+right: 0px;
+left: 0;
+height: 28px;
+
+display: flex;
+justify-content:space-between;
+}
+
+.contenedor .contenedorActivos .contenedorUsuariosActivos .status .derecha{
+  padding-right: 5px;
+   background:url(./../img/backgrounds/bodyBg.png) repeat #fff;
+   border:  1px solid var(--colorIco);
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 30px 0px 0px 0px;
+  line-height: 28px;
+  -webkit-box-shadow: -1px -1px 1px 1px rgba(0,0,0,0.13);
+}

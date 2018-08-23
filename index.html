@@ -7,119 +7,206 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Menu</title>
 
-  <link rel="stylesheet" href="./src/css/plantilla.css">
-  <link rel="stylesheet" href="./src/fuentes/icomoon/icomoon.css">
-  <link rel="stylesheet" href="./src/fuentes/icomoon/icomoon_v1/icomoon_v1.css">
+  <link rel="stylesheet" href="./admin/src/css/ui-asistencia.css">
+  <link rel="stylesheet" href="./admin/src/fuentes/icomoon/icomoon_v1/icomoon_v1.css">
+    <link rel="stylesheet" href="./admin/src/fuentes/icomoon/icomoon.css">
 </head>
 <body>
-  <!-- <header>
 
-  </header> -->
-  <div class="contenedor">
-      <nav>
-            <a href="#" class="barMenu">Menu <i class="icono icon icon-menu"></i></a>
+        <div class="contenedor">
+              <div class="cabecera">
+                       <div class="cab cabeceraIzquierdo">
+                            <a href="#"> <img src="./admin/src/img/logoInei.png" alt=""></a>
+                       </div>
 
-            <ul class="menu" style="">
-              <li>
-                <a href="#"><i class="icono izquierda icon icon-home"></i> <span class="texto">Inicio</span> </a>
-              </li>
-              <li>
-                <a href="#">
-                      <i class="icono izquierda icon icon-home"></i>
-                      <span class="texto">producto</span>
-                      <i class="icono derecha icon-chevron-down"></i>
-                      <i class="icono derecha2 icon-chevron-right"></i>
-                </a>
-                      <ul>
-                          <li><a href="#">Item 1</a></li>
-                          <li><a href="#">Item 2</a></li>
-                          <li><a href="#">Item 3</a></li>
-                          <li><a href="#">Item 4</a></li>
-                      </ul>
-                </li>
-              <li>
-                  <a href="#">
-                      <i class="icono izquierda icon icon-home"></i>
-                      <span class="texto">Inicio</span>
-                      <i class="icono derecha icon-chevron-down"></i>
-                      <i class="icono derecha2 icon-chevron-right"></i>
-                  </a>
-                  <ul>
-                      <li><a href="#">Item 1</a></li>
-                      <li><a href="#">Item 2</a></li>
-                      <li><a href="#">Item 3</a></li>
-                      <li><a href="#">Item 4</a></li>
-                  </ul>
-              </li>
-              <li><a href="#"><i class="icono izquierda icon icon-home"></i><span class="texto">Inicio</span> </a></li>
-                <li><a href="#"><i class="icono izquierda icon icon-home"></i><span class="texto">Inicio</span> </a></li>
-                  <li><a href="#"><i class="icono izquierda icon icon-home"></i><span class="texto">Inicio</span> </a></li>
+                       <ul class="cab cabeceraDerecho">
+                            <li ><a href="#" class="men"><i style=""class="icono icon icon-cog"> </i> Panel de Administracion <i class="icono derecha icon-chevron-down"></i></a>
+                               <ul  class="subMenu">
 
-                <li><a href="#"><i class="icono izquierda icon icon-home"></i><span class="texto">Inicio</span> </a></li>
+                                   <span><a class="contAvatar" href="#"> <i class="icon icon-user-tie"></i> </a> </span>
+                                   <hr>
+                                   <form>
+                                         <div class="contenedorInput">
+                                           <span><i class="icono icon icon-user"></i><input type="text" name="" value="" placeholder="Usuario"></span>
+                                         </div>
+                                         <div class="contenedorInput">
+                                             <span><i class="icono icon-lock-open"></i><input type="text" name="" value="" placeholder="Contraseña"></span>
+                                         </div>
+                                         <div class="contenedorInput">
+                                           <input type="button" name="" value="Entrar">
+                                         </div>
+                                   </form>
+                               </ul>
+                             </li>
+                       </ul>
+              </div>
 
-            </ul>
+              <div class="contenedorActivos">
+                  <div class="contenedorFormularioAsistencia">
+                    <div class="contenedorReloj">
+                            <!-- <input type="text" name="" value="" placeholder="12:12:12"> -->
+                            <div class="hora">12:12:12</div>
+                    </div>
+                    <div class="formulario">
+                      <form>
+                            <div class="contenedorInput">
 
-
-            <ul class="menuUsuario">
-              <!-- <li><a class="avatar-use" href="#"></a>asas</li> -->
-              <li ><a href="#"><i style=""class="icono izquierda estadoUser"> </i> Salomon Jose Pacohuanco <i class="icono derecha icon-chevron-down"></i></a>
-                  <ul  class="confUser">
-                      <li><a class="contAvatar" href="#"> <img  class="avatar" src="./src/img/images.jpg" border="1" alt="(!)"> <i  class="estado-avatar">Activo</i> </a> </li>
-                      <li><a href="#"> <i class="icono izquierda icon icon-home"></i>Configurar</a></li>
-                      <li><a href="#"> <i class="icono izquierda icon icon-home"></i>Perfil</a></li>
-                      <li><a href="#"> <i class="icono izquierda icon icon-home"></i>Cerrar</a></li>
-                  </ul>
-                </li>
-            </ul>
+                              <span><i class="icono icon icon-user"></i><input type="text" name="" value="" placeholder="usuario"></span>
+                            </div>
+                            <div class="contenedorInput">
+                                <span><i class="icono icon-lock-open"></i><input type="text" name="" value="" placeholder="contraseña"></span>
+                            </div>
+                            <div class="contenedorInput">
+                              <input type="button" name="" value="Marcar">
+                            </div>
+                      </form>
+                    </div>
 
 
-      </nav>
-
-      <div class="contenedorAdmin">
-            <div class="headerTablet">
-               <div class="headerTabletIzquierdo">  </div>
-               <ul class="headerTabletDerecho">
-
-                 <!-- <li><a class="avatar-use" href="#"></a>asas</li> -->
-                 <li ><a href="#"><i style=""class="icono izquierda estadoUser"> </i>  Jose Pacohuanco <i class="icono derecha icon-chevron-down"></i></a>
-                     <ul  class="confUser">
-                         <li><a class="contAvatar" href="#"> <img  class="avatar" src="./src/img/images.jpg" border="1" alt="(!)"> <i  class="estado-avatar">Activo</i> </a> </li>
-                         <li><a href="#"> <i class="icono izquierda icon icon-home"></i>Configurar</a></li>
-                         <li><a href="#"> <i class="icono izquierda icon icon-home"></i>Perfil</a></li>
-                         <li><a href="#"> <i class="icono izquierda icon icon-home"></i>Cerrar</a></li>
-                     </ul>
-                   </li>
-               </ul>
-            </div>
-            <div class="contenido">
-              Esto es un ejmplo de contenido
-              <p class="uno">salomon</p>
-              <p class="dos">salomon</p>
-              <p class="tres">salomon</p>
-              asdasdasdasdasdasdasdasddddddddddddddddddddddddddddddddddddddddddddddddddddddddlorem
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                  <div class="contenedorUsuariosActivos">
 
 
+<div class="activos">
+      <article>
+          <div class="foto">
+            <span  style="background-image:url(./admin/src/img/perfil1.jpg);background-size:cover; background-repeat:repeat;">
+              <!-- <img src="<?php echo"./admin/src/img/perfil3.jpg"; ?>" alt=""> -->
+            </span>
+          </div>
+          <!-- TODO: Usuario Detalle -->
+          <div class="contenedorDetalle">
+              <div class="cabeceraDetalle">
+                <span class="nombreUsuario">SALOMON VALDEZ PACOHUANACO</span>
+                <span class="eliminarSession">
+                      <form id="formEliminarSession" class="formEliminarSession">
+                            <input type="hidden"  name="idSession" value="">
+                            <input type="text" name="" value="">
+                            <input type="text" name="" value="">
+                            <input type="button" name="" value="Eliminar Sesion">
+                      </form>
+                </span>
+              </div>
+              <div class="detalle">
+                <div class="col columnaUno">
+                  <span><i class="titulo">Dni : </i> <i class="resDni"> 12345878 </i></span>
+                  <span><i class="titulo">Area: </i> <i class="resArea">ENEI </i></span>
+                  <span><i class="titulo">Hora Entrada: </i> <i class="resArea"> 13:12:00 </i></span>
+                </div>
+                <div class="col columnaDos">
+                  <span><i class="titulo">Cargo: </i> <i class="resCargo">PRACTICANTE </i></span>
+                  <span><i class="titulo">Dias Laborables: </i> <i class="resLaborables">LUN-MIE-VIE</i></span>
+                  <span><i class="titulo">Hora Salida: </i> <i class="resArea"> 12:12:01 </i></span>
 
-            </div>
-      </div>
+                </div>
+              </div>
+              <div class="HoraFechas">
+                  <div class="col columnaUno">
+                    <span><i class="titulo">Hora llegada : </i> <i class="resLLegada">12:12:12 </i></span>
 
-
-
-  </div>
-
-
+                    <!-- <span><i class="titulo">Fecha Llegada : </i> <i class="resFechaLLegada"> 12-01-2018</i></span> -->
+                  </div>
+                  <div class="col columnaDos">
+                      <span><i class="titulo">Min Tarde : </i> <i class="resLLegada">00 </i></span>
+                  </div>
 
 
 
+              </div>
+          </div>
+      </article>
+      <article>
+          <div class="foto">
+            <span>
+              <img src="" alt="">
+            </span>
+          </div>
+          <!-- TODO: Usuario Detalle -->
+          <div class="contenedorDetalle">
+              <div class="cabeceraDetalle"><span>SALOMON VALDEZ PACOHUANACO</span></div>
+              <div class="detalle">
+                <div class="col columnaUno">
+                  <span><i class="titulo">Dni : </i> <i class="resDni"> 12345878 </i></span>
+                  <span><i class="titulo">Area: </i> <i class="resArea">ENEI </i></span>
+                  <span><i class="titulo">Hora Entrada: </i> <i class="resArea"> 13:12:00 </i></span>
+                </div>
+                <div class="col columnaDos">
+                  <span><i class="titulo">Cargo: </i> <i class="resCargo">PRACTICANTE </i></span>
+                  <span><i class="titulo">Dias Laborables: </i> <i class="resLaborables">LUN-MIE-VIE</i></span>
+                  <span><i class="titulo">Hora Salida: </i> <i class="resArea"> 12:12:01 </i></span>
+
+                </div>
+              </div>
+              <div class="HoraFechas">
+                  <div class="col columnaUno">
+                    <span><i class="titulo">Hora llegada : </i> <i class="resLLegada">12:12:12 </i></span>
+
+                    <!-- <span><i class="titulo">Fecha Llegada : </i> <i class="resFechaLLegada"> 12-01-2018</i></span> -->
+                  </div>
+                  <div class="col columnaDos">
+                      <span><i class="titulo">Min Tarde : </i> <i class="resLLegada">00 </i></span>
+                  </div>
 
 
 
+              </div>
+          </div>
+      </article>
 
-<!-- referencias de Script -->
-    <script type="text/javascript" src="./src/jquery/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="./src/js/plantilla.js"></script>
+      <article>
+          <div class="foto">
+            <span>
+              <img src="./admin/src/img/perfil1.jpg" alt="">
+            </span>
+          </div>
+          <!-- TODO: Usuario Detalle -->
+          <div class="contenedorDetalle">
+              <div class="cabeceraDetalle"><span>SALOMON VALDEZ PACOHUANACO</span></div>
+              <div class="detalle">
+                <div class="col columnaUno">
+                  <span><i class="titulo">Dni : </i> <i class="resDni"> 12345878 </i></span>
+                  <span><i class="titulo">Area: </i> <i class="resArea">ENEI </i></span>
+                  <span><i class="titulo">Hora Entrada: </i> <i class="resArea"> 13:12:00 </i></span>
+                </div>
+                <div class="col columnaDos">
+                  <span><i class="titulo">Cargo: </i> <i class="resCargo">PRACTICANTE </i></span>
+                  <span><i class="titulo">Dias Laborables: </i> <i class="resLaborables">LUN-MIE-VIE</i></span>
+                  <span><i class="titulo">Hora Salida: </i> <i class="resArea"> 12:12:01 </i></span>
+
+                </div>
+              </div>
+              <div class="HoraFechas">
+                  <div class="col columnaUno">
+                    <span><i class="titulo">Hora llegada : </i> <i class="resLLegada">12:12:12 </i></span>
+
+                    <!-- <span><i class="titulo">Fecha Llegada : </i> <i class="resFechaLLegada"> 12-01-2018</i></span> -->
+                  </div>
+                  <div class="col columnaDos">
+                      <span><i class="titulo">Min Tarde : </i> <i class="resLLegada">00 </i></span>
+                  </div>
+
+
+
+              </div>
+          </div>
+      </article>
+</div>
+
+                    <div class="status">
+                      <div class="izquierda"></div>
+                      <div class="derecha">
+                         <span class="numActivos">Total Activos : 3 </span>
+                         <span class="Practicantes">Practicantes : 5</span>
+                         <span class="Docentes">Docentes : 4 </span>
+                         <span class="Empleados">Empleados : 17 </span>
+                       </div>
+                    </div>
+                  </div>
+
+              </div>
+        </div>
+      <!-- referencias de Script -->
+      <script type="text/javascript" src="./admin/src/jquery/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="./admin/src/js/ui-asistencia.js"></script>
 </body>
 </html>

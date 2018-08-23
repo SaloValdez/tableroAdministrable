@@ -13,9 +13,12 @@
 --bordeForm:#cdcdcd;
 --cabeceraForm:#efefef;
 --contenidoForm:#F9F9F9;
+--pieForm:#f5f5f5;
+--bordeFormTopPie:#e5e5e5;
 
 /* =========botones */
---verde:#468847;
+--botonVerde:#51a351;
+--botonVerdeHover:#468847;
 --amarillo:#F89406;
 --rojo:#B94A48;
 --azul:#3A87AD;
@@ -32,13 +35,25 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box; /* relleno y borde estan incluidos en el ancho de los elemntos*/
+  text-decoration: none;
+  list-style: none;
 }
+
+
 body{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px; /*espacio  top y bootom en las letras*/
   min-width: 200px;
   word-wrap: break-word;
+
   /* min-height: 100vh; */ */
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+html,input{
+    font-size: 16px; /* elemento padre;*/
 }
