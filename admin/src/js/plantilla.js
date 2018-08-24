@@ -11,10 +11,14 @@ $(document).ready(function(){
 
 
 //===============form========================
-vistaPreviaImagenInputFile();
-
+    vistaPreviaNombreImagenInputFile();
+    vistaPreviaImagenInputFile();
 //===============form==========================
 });
+
+
+
+
 
 function  clickEnHtml(){
       $("html").click(function(){
@@ -164,36 +168,28 @@ function slideSubmenuUsuarioTablet(){
 
 
 
-// TODO: INICIO input file
-// (function() {
-//
-//   'use strict';
-//
-//   $('.input-file').each(function() {
-//           var $input = $(this),
-//               $label = $input.next('.js-labelFile'),
-//               labelVal = $label.html();
-//
-//          $input.on('change', function(element) {
-//             var fileName = '';
-//             if (element.target.value) fileName = element.target.value.split('\\').pop();
-//             fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
-//          });
-//   });
-//
-// })();
 
-function vistaPreviaImagenInputFile(){
-      $('#file').change(function(){
-        // vistaPreviaImagen(this);
-        if (this.files  && this.files[0]) {
-            var  reader  = new FileReader(); //clase que permite leer archivos
-            reader.onload = function(e){  // e -> evento que permite acceder a la ruta de la imagen
-                $('#mostrarImagen').html("<img src='"+e.target.result+"' class='img-thumbnail'/>");
-            }
-            reader.readAsDataURL(this.files[0]);
-        }
-      });
-}
 
+// TODO : INICIO input file
+      //  Ver nombre imagen File
+      function vistaPreviaNombreImagenInputFile(){
+        $(".InputFileHiden").on("change",function(){
+
+          $(".nombre-imagen").text($(this)[0].files[0].name);
+        });
+
+      }
+      // Vista Previa Imagen imagen File
+      function vistaPreviaImagenInputFile(){
+            $('.InputFileHiden').change(function(){
+              // vistaPreviaImagen(this);
+              if (this.files  && this.files[0]) {
+                  var  reader  = new FileReader(); //clase que permite leer archivos
+                  reader.onload = function(e){  // e -> evento que permite acceder a la ruta de la imagen
+                      $('.content-img').html("<img src='"+e.target.result+"' class='img-thumbnail'/>");
+                  }
+                  reader.readAsDataURL(this.files[0]);
+              }
+            });
+      }
 // FIN  input file

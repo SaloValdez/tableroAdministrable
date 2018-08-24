@@ -13,7 +13,7 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-  /* z-index: 1000; */
+  z-index: 1000;
 }
 
 .contenedor nav .barMenu{
@@ -25,6 +25,7 @@
 
 }
 .contenedor  nav li{
+  font-size: 0.87rem;
     line-height: 35px;  /* altura del menu*/
     list-style: none;
     position: relative; /* TODO: PADRE  para que los subMenus salga de la maquetacion*/
@@ -352,9 +353,18 @@ nav ul li  .icono.derecha2{
     font-weight: bold;
     text-shadow: inset 0px 2px 3px rgba( 0,0,0,0.8);
 }
-.contenido .mostrarImagen img{
-  height: 100px;
+
+.contenido input[type="text"]:disabled {
+  background: #b4b4b4;
+  font-style: italic;
+  font-weight: bold;
+  border: 1px solid var(--colorUno);
+
+
 }
+/* .contenido .mostrarImagen img{
+  height: 100px;
+} */
 
 .contenido input[type=file]{
   display: none;
@@ -379,8 +389,13 @@ nav ul li  .icono.derecha2{
    display: flex;
    justify-content: center;
 }
+
+.contenido .content-img img{
+  height: 170px;
+  width: 150px;
+  border: 1px solid var(--bordeForm);
+}
 .contenido .content-input-file{
-/* background-color: yellowgreen; */
   position:absolute;
   bottom:-10px;
   display: flex;
@@ -402,19 +417,31 @@ nav ul li  .icono.derecha2{
   color: var(--azulClaro);
   font-weight:normal;
   font-style:italic;
+  overflow:auto;
+  width: 10rem;
+  height: 2rem;
 
 }
 
 .contenido .content-input-file .btn-imagen{
-  /* border: 1px solid rgb(63, 13, 231); */
   padding: 3px 5px;
-background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
+  background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
   border: 1px solid var(--bordeForm);
   border-radius: 0px 15px 15px 0px;
   text-shadow:0 1px 0 #ffffff;
 }
 .contenido .content-input-file .btn-imagen:hover{
-background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 36%, rgba(252,252,252,1) 100%);
+background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
+  padding-right: 7px;
+  font-size: 1rem;
+  color: var(--azulClaro);
+  cursor: pointer;
+}
+
+.contenido .content-input-file .btn-imagen:active{
+background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
+  padding-right: 5px;
+  font-size: 0.98rem;
 }
 
 .contenido .content-input-file .btn-imagen .icon{
