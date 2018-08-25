@@ -173,45 +173,78 @@ nav ul li  .icono.derecha2{
 
 
 /* TODO INICIO Grilla  (Sistema Grilla con CSS GRID)=============================== */
-.caja{
-  margin: auto;
-  padding-top: 20px;
-  margin-left: 1%;
-  margin-right:1%;
-  font-size: 16px;  /*fuente padre formulario*/
-}
+      .caja{
+        margin: auto;
+        padding-top: 20px;
+        margin-left: 1%;
+        margin-right:1%;
+        font-size: 16px;  /*fuente padre formulario*/
+      }
 
 
-.box-conten{
-  /* margin-top: 10px; */
-  width: 100%;
-  display: grid;
-  /* background-color: yellow; */
-  grid-template-columns: repeat(2,33.33333333%);
+      .box-conten{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        /*  */
+        grid-template-rows: ;
+      }
 
-  grid-template-rows: ;
-}
+      .box{
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 5px;
+        /* border: 1px solid #000; */
+      }
+      .box-conten .box:nth-child(3){
+        /* height: 100%; */
+        /* grid-column: 3/4; */
+        /* grid-row: span 4; */
+         /* margin: auto; */
+         /* width: 100%; */
+      }
+      .row-4{
+        grid-row: span 4;
+      }
 
-.col{
-  /* border: 1px solid rgb(50, 42, 103); */
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-bottom: 5px;
-}
-.box-conten .col:nth-child(3){
-  height: 100%;
-  grid-column: 3/4;
-  grid-row: 1/5;
-  /* background-color: rgb(154, 215, 241); */
-  /* border: black 1px solid; */
-  /* align-self: stretch; */
-   margin: auto;
-   width: 100%;
-  /* line-height: 40px; */
-}
-.col:nth-child(3) > div{
+      .col-12{
+        grid-column: span 12;
+      }
+      .col-11{
+        grid-column: span 11;
+      }
+      .col-10{
+        grid-column: span 10;
+      }
+      .col-9{
+        grid-column: span 9;
+      }
+      .col-8{
+        grid-column: span 8;
+      }
+      .col-7{
+        grid-column: span 7;
+      }
+      .col-6{
+        grid-column: span 6;
+      }
+      .col-5{
+        grid-column: span 5;
+      }
+      .col-4{
+        grid-column: span 4;
+      }
+      .col-3{
+        grid-column: span 3;
+      }
+      .col-2{
+        grid-column: span 2;
+      }
+      .col-1{
+        grid-column: span 1;
+      }
 
-}
+
 /* TODO FIN Grilla  (Sistema Grilla con CSS GRID)=============================== */
 
 
@@ -256,35 +289,24 @@ nav ul li  .icono.derecha2{
               text-shadow: 0 1px 0 #ffffff;
               font-size: 1.3rem;
             }
-
             .box-formulario .cabeceraFormulario .cont-boton{
-              align-self: center;
-              margin-right: 5px;
+                padding-top: 2px;
             }
-            .boton{
-              align-self: center;
-              padding: 2px 10px;
-              font-size: 0.8rem;
-              font-weight: bold;
-                  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-              /* border: 1px solid var(--bordeForm); */
-              color: #fff;
-              box-shadow: 0px 1px 0px 0px rgb(31, 31, 31);
-            }
-            .boton > .icon{
-              color: rgb(18, 18, 18);
-              margin-right: 5px;
-              text-shadow: 0 -1px 0 rgb(124, 124, 124);
-            }
-            .boton.verde{
-              background-color: var(--botonVerde);
-              border: 1px solid rgb(20, 98, 49);
+            .box-formulario .cabeceraFormulario .cont-boton .boton{
+                margin-top: 2px;
+                margin-bottom: 0px;
+                padding: 3px 5px;
             }
 
-            .boton.verde:hover{
-              background-color: var(--botonVerdeHover);
-              padding: 3px 11px;
+            .box-formulario .cabeceraFormulario .cont-boton .boton:active{
+                margin-bottom: 0px;
+                padding: 4px 6px;
+
             }
+
+
+
+
 .box-formulario .bodyFormulario{
   /* background-color: var(--contenidoForm); */
   background-color: rgb(255, 255, 255);
@@ -294,40 +316,40 @@ nav ul li  .icono.derecha2{
 .box-formulario .pieFormulario{
   display: flex;
   border-top: 1px solid var(--bordeFormTopPie);
-  background-color: #f5f5f5;
-  /* background-color: deeppink; */
+  background-color: #e5e5e5;
   height: 100%;
   justify-content: space-between;
   padding: 10px   0px;
 
 }
-        .box-formulario .pieFormulario .cont-mensaje-pie{
-          /* display: flex; */
-          /* margin: 0px  15px; */
-          align-self: center;
+.box-formulario .pieFormulario .cont-mensaje-pie {
+  align-self: center;
+  padding-right: 1%;
+}
+        .campoImportante{
+          font-size: 1rem;
+          color: rgb(223, 30, 30);
+          text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
         }
         .box-formulario .pieFormulario .cont-botones-pie{
           margin-right: 5px;
           padding: 10px;
           align-self: center;
+          display: flex;
         }
-
-
-
-
-
-
-
-
-
-
-
-
+.input-important{
+    position: relative;
+}
 
 .contenido label{
   margin-bottom: 0px;
   font-weight: 0px;
-  font-size: 0.95em
+  font-size: 0.95em;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+user-select: none;
+
 }
 .contenido input[type=text]{
     width: 100%;
@@ -355,25 +377,35 @@ nav ul li  .icono.derecha2{
 }
 
 .contenido input[type="text"]:disabled {
-  background: #b4b4b4;
+  background: #c4c4c4;
   font-style: italic;
   font-weight: bold;
   border: 1px solid var(--colorUno);
-
-
 }
-/* .contenido .mostrarImagen img{
-  height: 100px;
-} */
+
+.asterisco{
+      color: rgb(223, 30, 30);
+      text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+      font-size: 1rem;
+      position: absolute;
+      right: 5px;
+      top:4px;
+      user-select: none;
+}
 
 .contenido input[type=file]{
   display: none;
 }
 
+.content-buscar input[type=text]{
+  background:rgba(1, 194, 245,0.3);
+border: 1px solid rgb(144, 144, 144);
+border-right: 0px;
+}
+
 
 .contenido .content-img-input{
         height: 100%;
-        /* background-color: yellow; */
         display: flex;
         justify-content: center;
         position:relative;
@@ -381,7 +413,6 @@ nav ul li  .icono.derecha2{
 .contenido .content-img{
   width: 100%;
   margin: 10px 10px;
-  /* background-color: tomato; */
   border: 2px solid var(--bordeForm);
   background-color: var(--contenidoForm);
    border-style: dashed;
@@ -430,40 +461,143 @@ nav ul li  .icono.derecha2{
   border-radius: 0px 15px 15px 0px;
   text-shadow:0 1px 0 #ffffff;
 }
-.contenido .content-input-file .btn-imagen:hover{
-background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
-  padding-right: 7px;
-  font-size: 1rem;
-  color: var(--azulClaro);
-  cursor: pointer;
-}
+      .contenido .content-input-file .btn-imagen:hover{
+      background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
+        padding-right: 7px;
+        font-size: 1rem;
+        color: var(--azulClaro);
+        cursor: pointer;
+      }
 
-.contenido .content-input-file .btn-imagen:active{
-background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
-  padding-right: 5px;
-  font-size: 0.98rem;
-}
+      .contenido .content-input-file .btn-imagen:active{
+      background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%);
+        padding-right: 5px;
+        font-size: 0.98rem;
+      }
 
-.contenido .content-input-file .btn-imagen .icon{
-  font-size: 1.2rem;
-  float: left;
-  margin-top:2px;
-  margin-right: 5px;
-}
-
-
-   /* caja BOX cabecera y contenido */
+      .contenido .content-input-file .btn-imagen .icon{
+        font-size: 1.2rem;
+        float: left;
+        margin-top:2px;
+        margin-right: 5px;
+      }
 
 
+/* TODO: INICIO --- BOTONES CRUD ======================================================*/
+      .cont-boton-crud{
+
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:row;
+        padding: 5px 5px;
+        border-radius: 8px;
+        background-color: rgb(204, 204, 204);
+
+      }
+
+
+      .boton{
+        /* background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(181,181,181,1) 100%); */
+        background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(184,184,184,1) 68%, rgba(181,181,181,1) 70%, rgba(148,148,148,1) 100%);
+        user-select: none;
+        padding: 6px 8px;
+        color: rgb(15, 15, 15);
+        font-weight: bold;
+        border-radius: 3px;
+        border: 1px solid var(--bordeForm);
+        margin-right: 6px;
+        margin-bottom: 5px;
+        font-size: 1rem;
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.68);
+
+      }
+      .boton .icon{
+        font-size: 1.3rem;
+        float: left;
+        margin-left: 0px;
+        font-size: red;
+      }
+      .boton >span{
+        margin: 0px 0px;
+        margin-left: 5px;
+
+        /* display: none; */
+      }
+
+        .boton:hover{
+        background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(204,204,204,1) 100%);
+        cursor: pointer;
+        color: var(--azulClaro);
+        padding: 6px 8px;
+        font-size: 17px;
+        font-size: 1rem;
+        }
+        .boton:active{
+        padding: 7px 8px;
+        font-size: 1rem;
+        border-bottom:1px solid rgb(255, 255, 255);
+        margin-bottom: 0px;
+
+        }
+      .boton.disabled{
+          background: var(--bordeForm);
+          color: rgb(70, 65, 65);
+          font-weight: normal;
+          border: 1px solid rgb(209, 208, 208);
+          border: 1px solid rgb(163, 162, 162);
+          border-bottom: 1px solid rgb(255, 255, 255);
+          font-size: 1rem;
+          padding: 6px 8px;
+          text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+      }
+
+        .content-buscar{
+              display: flex;
+        }
+        .content-buscar >input{
+              width: 50% !important;
+              border-radius: 2px 0px 0px 2px !important;
+
+        }
+
+        .botonBuscarPor{
+          display: flex;
+          padding: 3px 5px;
+          border: 1px solid rgb(122, 122, 122);
+          font-size: 0.8rem;
+          cursor: pointer;
+          border-radius: 0rem 1rem 1rem 0rem;
+          font-weight: bold;
+          text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+          color:rgb(0, 0, 0);
+          background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,1) 19%, rgba(184,184,184,1) 68%, rgba(181,181,181,1) 70%, rgba(148,148,148,1) 100%);
+          box-shadow: 1px 0px 1px 0px rgba(0,0,0,0.61);
+          border-right: 1px solid #ffffff;
+          border-top: 1px solid #d5d5d5;
+          user-select: none;
+        }
+        .botonBuscarPor .icon{
+        margin-left: 8px;
+        font-size: 1.3rem;
+        }
+        .botonBuscarPor:hover{
+                    padding: 3px 6px;
+        background: linear-gradient(to bottom, rgba(148,148,148,1) 0%, rgba(184,184,184,1) 17%, rgba(246,246,246,1) 57%, rgba(239,239,239,1) 100%);
+        color: var(--azulClaro);
+        }
+
+        .botonBuscarPor:active{
+            font-size: 0.85rem;
+        }
 
 
 
 
 
 
-
-
-
+/* TODO: FIN ----- BOTONES CRUD ======================================================*/
 
 
 
@@ -515,7 +649,8 @@ background: linear-gradient(to bottom, rgba(239,239,239,1) 0%, rgba(246,246,246,
       .contenedor nav ul li a .icono{
 
           line-height: 35px;
-          text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px;
+          text-shadow: rgb(142, 142, 142) -0.5px -0.5px 1px !important;
+
 
       }
 

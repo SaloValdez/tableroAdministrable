@@ -6,13 +6,36 @@
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Menu</title>
+<!--=======INICIO   Librerias y otros -->
+      <!-- referencias eSTILOS -->
+      <link rel="stylesheet" href="./src/librerias/bootstrap/bootstrap-3.3.5.min.css">
+      <link rel="stylesheet" href="./src/librerias/jqueryUI/jquery-ui.min.css">
+      <link rel="stylesheet" href="./src/fuentes/icomoon/icomoon.css">
+      <link rel="stylesheet" href="./src/fuentes/icomoon/icomoon_v1/icomoon_v1.css">
+      <!-- referencias LIBRERIAS SCRIPT -->
+      <script type="text/javascript" src="./src/librerias/bootstrap/bootstrap.min.js"></script>
+      <script type="text/javascript" src="./src/librerias/jquery/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="./src/librerias/jqueryUI/jquery-ui.min.js"></script>
+<!--=======FIN    Librerias y otros -->
 
-  <link rel="stylesheet" href="./src/bootstrap/bootstrap-3.3.5.min.css">
 
 
+<!-- TODO:  mis estilos -->
   <link rel="stylesheet" href="./src/css/plantilla.css">
-  <link rel="stylesheet" href="./src/fuentes/icomoon/icomoon_v1/icomoon_v1.css">
-  <link rel="stylesheet" href="./src/fuentes/icomoon/icomoon.css">
+  <link rel="stylesheet" href="./src/css/check-box.css">
+  <link rel="stylesheet" href="./src/css/tabs.css">
+
+
+<!-- TODO: mis script -->
+  <script type="text/javascript" src="./src/js/plantilla.js"></script>
+  <script type="text/javascript" src="./src/js/tabs.js">
+
+  </script>
+
+
+
+
+
 </head>
 <body>
   <!-- <header>
@@ -94,134 +117,171 @@
                    </li>
                </ul>
             </div>
-
-
-
 <!-- TODO: FORMULARIO -->
-
             <div class="contenido">
-                  <div class="caja">
-
-                    <div class="box-formulario">
-                          <div class="cabeceraFormulario">
-                            <div class="titulo">
-                                <span class="cont-icon"><i class="icon icon-user"></i></span>
-                                <span class="lineaDer"></span>
-                                <h5>Formulario Personal</h5>
-                            </div>
-
-                              <div class="cont-boton">
-                                <button class="boton verde"><i class="icon icon-user"></i>Soy Boton </button>
-                              </div>
-                          </div>
-                          <div class="bodyFormulario">
-
-                            <div class="box-conten">
-                               <div class="col">
-                                 <label for="">Nombres:</label><br>
-                                 <input type="text" value="SALOMON MARIO DEL JOSE" >
-                               </div>
-                               <div class="col">
-                                 <label for="">Apellidos: </label><br>
-                                 <input type="text" value="villavicencio Pacohuanaco">
-                               </div>
-                               <div class="col">
-
-                                 <div class="content-img-input">
-                                   <div class="content-img">
-                                     <img src='./src/img/perfil1.jpg' style=' height:170px; width:150px' class='img-thumbnail'>
 
 
-                                   </div>
-                                  <div class="content-input-file">
-                                    <div  class="nombre-imagen"> gif , png , jpg , jpeg </div>
-                                    <input type="file" class="InputFileHiden" id="InputFileHiden">
-                                    <label for="InputFileHiden" class="btn-imagen" >Subir img. <i class=" icon icon-image-inverted"></i></label>
+
+
+              <div class="btn-tabs">
+                    <a href="#">Seccion 1</a>
+                    <a href="#">Seccion 2</a>
+                    <!-- <a href="#">Seccion 3</a> -->
+                    <!-- <a href="#">Seccion 4</a>
+                    <a href="#">Seccion 5</a> -->
+              </div>
+
+              <div class="tabs-contents">
+                      <div class="tabs-contents-item" >
+                        <div class="caja">
+
+                          <div class="box-formulario">
+                                <div class="cabeceraFormulario">
+                                  <div class="titulo">
+                                      <span class="cont-icon"><i class="icon icon-user"></i></span>
+                                      <span class="lineaDer"></span>
+                                      <h5>Formulario Personal</h5>
                                   </div>
+                                    <div class="cont-boton">
+                                    <div class="boton " id="btnNuevo"><i class="icon  icon-magnifying-glass"></i> <span>Ver / Buscar</span></div>
+                                    </div>
+                                </div>
+                                <div class="bodyFormulario">
+                                  <div class="box-conten box-empleado"> <!--MAIN-->
+                                     <div class="box col-4 ">
+                                       <label for=""><span>Nombres:</span></label><br>
+                                        <span class="input-important"><input type="text" value="SALOMON MARIO DEL JOSE" ><span class="asterisco">*</span></span>
 
+                                     </div>
+                                     <div class="box col-4">
+                                       <label for="">Apellidos:</label><br>
+                                          <span class="input-important"><input type="text" value="VALDEZ PACOHUANACO" ><span class="asterisco">*</span></span>
+                                     </div>
+                                     <div class="box col-4 row-4" >
 
-                                 </div>
+                                       <div class="content-img-input">
+                                             <div class="content-img">
+                                                <img src='./src/img/perfil1.jpg' style=' height:170px; width:150px' class='img-thumbnail'>
+                                             </div>
+                                             <div class="content-input-file">
+                                                <div  class="nombre-imagen"> gif , png , jpg , jpeg </div>
+                                                <input type="file" class="InputFileHiden" id="InputFileHiden">
+                                                <label for="InputFileHiden" class="btn-imagen" >Subir img. <i class=" icon icon-image-inverted"></i></label>
+                                             </div>
+                                       </div>
+                                     </div>
+                                     <div class="box col-4">
+                                             <label for="">Dni:</label>
+                                            <div class="content-buscar">
+                                                       <span class="input-important"><input type="text" value="46835582" ><span class="asterisco">*</span></span>
+                                                   <div class="botonBuscarPor"> Buscar por Dni
+                                                      <i class="icon  icon-magnifying-glass"></i>
+                                                   </div>
+                                            </div>
+                                     </div>
+                                     <div class="box col-4">
+                                       <label for="">Direccion:</label><br>
+                                       <input type="text" value="Av. San Francisco Mz25 lte 15">
+                                     </div>
+                                     <div class="box col-2">
+                                       <label for="">Fech Nac. : </label><br>
+                                       <input type="text" value="12/12/12"  id="fnacimientoPersonal">
+                                     </div>
 
-
-                               </div>
-                               <div class="col">
-                                 <div>
-                                   <label for="">Dni: </label><br>
-                                   <input type="text" value="46462585" disabled>
-                                 </div>
-                               </div>
-
-                               <div class="col">
-                                 <label for="">Direccion: </label><br>
-                                 <input type="text" value="Av. San Francisco Mz25 lte 15">
-                               </div>
-                               <div class="col">
-                                 <label for="">Fech Nac. :</label><br>
-                                 <input type="text" value="12/12/12">
-                               </div>
-
-                               <div class="col">
-                                 <label for="">Correo: </label><br>
-                                 <input type="text" value="salomon.valdez.paco@gmail.com">
-                               </div>
-                               <div class="col">
-                                 <label for="">Nº Celular: </label><br>
-                                 <input type="text" value="052 952 916835">
-                               </div>
-                               <div class="col">
-                                 <label for="">Genero: </label><br>
-                                 <input type="text" value="Masculino  y  femenino">
-                               </div>
-                               <div class="col">
-                                 <label for="">Otros</label><br>
-                                 <input type="text" value="Otros">
-                               </div>
+                                     <div class="box col-3">
+                                       <label for="">Correo: </label><br>
+                                       <input type="text" value="salomon.valdez.paco@gmail.com">
+                                     </div>
+                                     <div class="box col-3">
+                                       <label for="">Nº Celular: </label><br>
+                                       <input type="text" value="052 952 916835">
+                                     </div>
+                                     <div class="box col-3">
+                                       <fieldset>
+                                                <legend> Género<span class="asterisco" style="position:relative; margin-left:6px;">*</span></legend>
+                                                <div class="form-radio">
+                                                   <input type="radio" name="generoPersonal"  value="M" id="M"><label for="M">Hombre</label>
+                                                   <input type="radio" name="generoPersonal" value="F" id="F"><label for="F">Mujer</label>
+                                                </div>
+                                        </fieldset>
+                                     </div>
+                                  </div>
+                                </div>
+                                <div class="pieFormulario">
+                                  <div class="cont-botones-pie">
+                                    <!-- <div class="cont-boton-crud"> -->
+                                      <div class="boton " id="btnNuevo"><i class="icon icon-documents"></i> <span>Nuevo</span></div>
+                                      <div class="boton " id="btnGuardar" ><i class="icon icon-save"></i><span>Guardar</span></div>
+                                      <div class="boton " id="btnActualizar" ><i class="icon icon-cycle"></i><span>Modificar</span></div>
+                                      <div class="boton " id="boton" ><i class="icon icon-box"></i><span>Eliminar</span></div>
+                                      <div class="boton " id="btnCancelar" ><i class="icon icon-circle-with-cross"></i>   <span>Cancelar</span></div>
+                                    <!-- </div> -->
+                                  </div>
+                                    <div class="cont-mensaje-pie">
+                                        <span class="campoImportante">( * ) Campos Necesarios. Obligatirio llenar.</span>
+                                    </div>
+                                </div>
                             </div>
 
-
-
-                          </div>
-                          <div class="pieFormulario">
-                              <div class="cont-mensaje-pie">
-                                  <!-- <span class="cont-icon"><i class="icon icon-user"></i></span> -->
-                                  <span class="lineaDer"></span>
-                                  <h5>Formulario Personal</h5>
-                              </div>
-
-                                <div class="cont-botones-pie">
-                                  <button class="boton verde"><i class="icon icon-user"></i>Soy Boton 1</button>
-
-                                </div>
-                          </div>
+                        </div>
                       </div>
-
-                  </div>
-
-
-
-
-
-
-                <div class="caja">
-
-                      <!-- <div class="fila">
-                         <div class="col-6">...</div>
-                         <div class="col-6">...</div>
+                      <div class="tabs-contents-item">
+                          <p>Contenido 2</p>
+                         <p>salo 2</p>
+                      </div>
+                      <!-- <div class="tabs-contents-item" >
+                          <p>Contenido 3</p>
+                           <p>salo 3</p>
+                      </div>
+                      <div class="tabs-contents-item" >
+                          <p>Contenido 4</p>
+                           <p>salo 4</p>
+                      </div>
+                      <div class="tabs-contents-item" >
+                          <p>Contenido 5</p>
+                          <p>salo 5</p>
                       </div> -->
-                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             </div>
-
-
-
       </div>
   </div>
 
 
 
+  <script type="text/javascript" src="./src/js/data-piker.js"></script>
 
-<!-- referencias de Script -->
-    <script type="text/javascript" src="./src/jquery/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="./src/js/plantilla.js"></script>
 </body>
 </html>

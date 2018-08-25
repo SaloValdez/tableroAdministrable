@@ -1,0 +1,88 @@
+
+@import url(./root.css);
+
+/*====INICIO===== ESTILOS RADIO  Y Checkbox */
+
+.form-radio{
+display: flex;
+}
+.form-radio input[type ="radio"],
+.form-checkbox input[type ="checkbox"]{
+  display: none;
+  margin: 10px;
+}
+
+.form-radio label,
+.form-checkbox label{
+color: #131313;
+
+/* background: rgba(0,0,0,0.1); */
+padding: 5px 5px 5px 28px;
+display: inline-block;
+position:relative;
+font-size: 1em;
+font-weight: normal;
+border-radius: 3px;
+cursor: pointer;
+transition: all 0.3s ease;
+user-select: none;
+}
+.form-radio label:hover,
+.form-checkbox label:hover{
+    background:rgba(1, 194, 245,0.3);
+}
+.form-radio label:before,
+.form-checkbox label:before{
+  content: "";
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  background: #fff;
+  box-shadow: inset 0 0 3px 0 rgb(162, 162, 162);
+  border: 2px solid var(--colorDos);
+  border-radius: 50%;
+  position: absolute;
+  left: 8px;
+  margin-top: 2px;
+  /* top:4px; */
+}
+.form-checkbox label:before{
+  border-radius: 3px;
+}
+.form-radio input[type="radio"]:checked + label,
+.form-checkbox input[type="checkbox"]:checked + label {
+   padding: 5px 5px;
+   background:  var(--colorUno);
+   border-radius: 2px;
+   color: #171717;
+   font-weight: bold;
+}
+.form-radio input[type="radio"]:checked + label:before,
+.form-checkbox input[type="checkbox"]:checked + label:before {
+  display: none;
+}
+
+fieldset{
+
+margin-top: 0px;
+padding-left: 15px;
+border: 1px solid rgba(0, 0, 0, 0.15);
+  /* padding: 0px; */
+  border-radius: 4px;
+  background-color:rgb(247, 247, 247);
+padding-bottom: 5PX;
+width: 12.7rem;
+
+
+}
+fieldset legend{
+  width: 70px;
+font-weight: bold;
+padding: 0px;
+height: 0PX;
+border: 0px;
+font-size: 1rem;
+margin-left: 5px;
+padding-bottom: 20px;
+}
+/*====FIN===== ESTILOS RADIO  Y Checkbox */

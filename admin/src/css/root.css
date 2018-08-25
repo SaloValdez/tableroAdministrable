@@ -8,6 +8,7 @@
 
   --colorCuatro:#b94a48; /*importante*/
 /* background-color: var(--MiColor); */
+--colorCampoImportante:rgb(223, 30, 30);
 
 /*Formularios*/
 --bordeForm:#cdcdcd;
@@ -20,6 +21,7 @@
 --botonVerde:#51a351;
 --botonVerdeHover:#468847;
 --amarillo:#F89406;
+--amarilloImportante:#f7efa7;
 --rojo:#B94A48;
 --azul:#3A87AD;
 --azulClaro:#0044CC;
